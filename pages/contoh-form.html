@@ -1,0 +1,184 @@
+<!doctype html>
+<html ⚡ lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>Contoh Form AMP</title>
+    <link rel="canonical" href="https://dmp-i.github.io/BelajarAMP/pages/contoh-form.html">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.4.js"></script>
+    <style amp-custom>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #764ba2;
+        }
+        
+        .back-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        .back-button:hover {
+            background: #764ba2;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Contoh Form AMP</h1>
+    </div>
+    
+    <div class="container">
+        <div class="section">
+            <h2>Form dengan AMP</h2>
+            <p>Komponen <code>amp-form</code> memungkinkan Anda membuat form yang responsif dan cepat dengan validasi client-side.</p>
+            
+            <form method="get" action-xhr="https://httpbin.org/get" custom-validation-reporting="show-all-on-submit">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="masukkan@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" name="phone" placeholder="08xx-xxxx-xxxx">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..."></textarea>
+                </div>
+                
+                <button type="submit">Kirim</button>
+                
+                <div submit-success>
+                    <div class="success-message">
+                        Form berhasil dikirim! Terima kasih telah menghubungi kami.
+                    </div>
+                </div>
+                
+                <div submit-error>
+                    <div class="success-message" style="background: #f8d7da; color: #721c24;">
+                        Terjadi kesalahan saat mengirim form. Silakan coba lagi.
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="section">
+            <h2>Fitur Form AMP</h2>
+            <ul>
+                <li>Validasi real-time tanpa JavaScript tambahan</li>
+                <li>Error handling yang elegan</li>
+                <li>Submit handling dengan action-xhr</li>
+                <li>Custom validation reporting</li>
+                <li>Support untuk berbagai input types</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <a href="../index.html" class="back-button">← Kembali ke Halaman Utama</a>
+        </div>
+    </div>
+</body>
+</html>
