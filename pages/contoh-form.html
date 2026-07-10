@@ -122,6 +122,24 @@
             padding: 15px;
             border-radius: 4px;
             margin-top: 10px;
+            display: none;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
         }
     </style>
 </head>
@@ -160,15 +178,15 @@
                     <button type="submit">Kirim</button>
                 </fieldset>
                 
-                <div submit-success>
-                    <div class="success-message">
-                        Form berhasil dikirim! Terima kasih telah menghubungi kami.
+                <div submit-success="">
+                    <div class="success-message show">
+                        ✓ Form berhasil dikirim! Terima kasih telah menghubungi kami.
                     </div>
                 </div>
                 
-                <div submit-error>
-                    <div class="success-message" style="background: #f8d7da; color: #721c24;">
-                        Terjadi kesalahan saat mengirim form. Silakan coba lagi.
+                <div submit-error="">
+                    <div class="error-message show">
+                        ✗ Terjadi kesalahan saat mengirim form. Silakan coba lagi.
                     </div>
                 </div>
             </amp-form>
