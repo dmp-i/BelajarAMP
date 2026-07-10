@@ -8,7 +8,7 @@
     <meta name="google-site-verification" content="9S1_9OXioHShj4GhCkoI1f8awUdOUiFUKtocByty9oc" />
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.2.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <style amp-custom>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -49,6 +49,12 @@
         
         amp-form {
             margin-top: 20px;
+        }
+        
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
         }
         
         .form-group {
@@ -129,8 +135,8 @@
             <h2>Form dengan AMP</h2>
             <p>Komponen <code>amp-form</code> memungkinkan Anda membuat form yang responsif dan cepat dengan validasi client-side.</p>
             
-            <amp-form method="get" action-xhr="https://httpbin.org/get" custom-validation-reporting="show-all-on-submit">
-                <form>
+            <amp-form method="post" action-xhr="https://httpbin.org/post" custom-validation-reporting="show-all-on-submit">
+                <fieldset>
                     <div class="form-group">
                         <label for="name">Nama Lengkap</label>
                         <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
@@ -152,7 +158,7 @@
                     </div>
                     
                     <button type="submit">Kirim</button>
-                </form>
+                </fieldset>
                 
                 <div submit-success>
                     <div class="success-message">
