@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <title>Contoh Form AMP</title>
     <link rel="canonical" href="https://dmp-i.github.io/BelajarAMP/pages/contoh-form.html">
+    <meta name="google-site-verification" content="9S1_9OXioHShj4GhCkoI1f8awUdOUiFUKtocByty9oc" />
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.4.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.2.js"></script>
     <style amp-custom>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -46,7 +47,7 @@
             margin-top: 0;
         }
         
-        form {
+        amp-form {
             margin-top: 20px;
         }
         
@@ -128,28 +129,30 @@
             <h2>Form dengan AMP</h2>
             <p>Komponen <code>amp-form</code> memungkinkan Anda membuat form yang responsif dan cepat dengan validasi client-side.</p>
             
-            <form method="get" action-xhr="https://httpbin.org/get" custom-validation-reporting="show-all-on-submit">
-                <div class="form-group">
-                    <label for="name">Nama Lengkap</label>
-                    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="masukkan@email.com" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Nomor Telepon</label>
-                    <input type="tel" id="phone" name="phone" placeholder="08xx-xxxx-xxxx">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Pesan</label>
-                    <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..."></textarea>
-                </div>
-                
-                <button type="submit">Kirim</button>
+            <amp-form method="get" action-xhr="https://httpbin.org/get" custom-validation-reporting="show-all-on-submit">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="masukkan@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <input type="tel" id="phone" name="phone" placeholder="08xx-xxxx-xxxx">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" placeholder="Tulis pesan Anda di sini..."></textarea>
+                    </div>
+                    
+                    <button type="submit">Kirim</button>
+                </form>
                 
                 <div submit-success>
                     <div class="success-message">
@@ -162,7 +165,7 @@
                         Terjadi kesalahan saat mengirim form. Silakan coba lagi.
                     </div>
                 </div>
-            </form>
+            </amp-form>
         </div>
         
         <div class="section">
